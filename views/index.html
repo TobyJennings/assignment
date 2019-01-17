@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Club Pizza</title>
+  <link rel="stylesheet" href="../assets/framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="../assets/css/icons.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Right panel with cover effect -->
+    <div class="panel panel-right panel-cover theme-color">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Menu</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <div class="block-title">Control Main View</div>
+            <div class="list links-list">
+              <ul>
+                <li>
+                  <a href="/order/" data-view=".view-main" class="panel-close">Recipes</a>
+                </li>
+                <li>
+                  <a href="/form/" data-view=".view-main" class="panel-close">Form</a>
+                </li>
+              </ul>
+            </div>
+            <div class="block-title">Information</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/about/">About Us</a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main ios-edges">
+      <!-- Page, data-name contains page name which can be used in callbacks -->
+      <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding title-central">Club Pizza</div>
+            <img class="logo-img right" src="../assets/media/Base_Logo.png" height="56px"/>
+          </div>
+        </div>
+        <!-- Toolbar-->
+        <!-- Scrollable page content-->
+          <div class="block-title title-navigation">Navigation</div>
+          <div class="block block-strong">
+            <div class="row">
+              <div class="col-20">
+                <a href="#" class="popup-open" data-popup="#my-popup">
+                  <img src="../assets/media/pepperoni-pizza.png" height="159px" width="316px"/>
+                </a>
+              </div>
+            </div>
+          </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title">Select Pizza</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Tap to view Recipe.</p>
+              <body onload ="var start=setInterval('changeImg()',10000);">
+                <div id="wrapper" class="list links-list">
+                <ul>
+                  <li>
+                      <a class="link image-list" id="cheese-popup">
+                        <img src="../assets/media/cheese-pizza.png" width="316px" height="159px"/>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/order/" class="link popup-close image-list">
+                        <img src="../assets/media/pina-pizza.png" width="316px" height="159px"/>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/order/" class="link popup-close image-list">
+                        <img src="../assets/media/pepperoni-pizza.png" width="316px" height="159px"/>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/order/" class="link popup-close image-list">
+                        <img src="../assets/media/veggie-pizza.png" width="316px" height="159px"/>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/order/" class="link popup-close image-list">
+                        <img src="../assets/media/beef-pizza.png" width="316px" height="159px"/>
+                      </a>
+                  </li>
+                </ul>
+                </div>
+                <div class="popup" id="cheese-popup">
+                    <div class="view">
+                      <div class="page">
+                        <div class="navbar">
+                          <div class="navbar-inner">
+                            <div class="title">cheese</div>
+                            <div class="right">
+                              <a href="#" class="link popup-close">Close</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </body>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Cordova -->
+  <!--
+  <script src="cordova.js"></script>
+  -->
+
+  <!-- Framework7 library -->
+  <script src="../assets/framework7/js/framework7.min.js"></script>
+
+  <!-- App routes -->
+  <script src="../assets/js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
