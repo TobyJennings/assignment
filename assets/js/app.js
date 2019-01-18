@@ -7,15 +7,6 @@ var app  = new Framework7({
   id: 'io.framework7.testapp', // App bundle ID
   name: 'Framework7', // App name
   theme: 'auto', // Automatic theme detection
-  // App root data
-  data: function () {
-    return {
-      user: {
-        firstName: 'John',
-        lastName: 'Doe',
-      },
-    };
-  },
   // App root methods
   methods: {
     helloWorld: function () {
@@ -45,4 +36,32 @@ function changeImg() {
 }
 
 //get pizza info from JSON
-var obj = {table: "", limit: 1}
+var getName = function(type) {
+  app.request.json('../assets/jsons/pizza.json', function (data) {
+    var objname = data[type].pizza;
+    var objIngred = data[type].ingredients;
+    var objImg = data[type].img;
+    document.getElementById('pizza-name').innerHTML = objname
+
+    function makeUL(array) {
+      // Create the list element
+      var list = document.createElement('ul');
+
+      for (var i = 0; i < array.length; i++) {
+          // Create the list item
+          var item = document.createElement('li');
+          // Set its contents
+          item.appendChild(document.createTextNode(array[i]));
+          // Add it to the list
+          list.appendChild(item);
+      }
+  
+      // Finally, return the constructed list:
+      return list;
+    }
+    document.getElementById('pizza-ingred').appendChild(makeUL(objIngred));
+    document.getElementById('recipe').innerHTML = data.recipie.recipe
+    document.getElementById('pizza-img').innerHTML = '<img src="'+objImg+'" height="159px" width="316px"/>'
+  })
+  
+};

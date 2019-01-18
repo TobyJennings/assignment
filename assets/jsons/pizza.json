@@ -1,0 +1,89 @@
+{
+    "pepperoni": {
+        "pizza": "Pepperoni",
+        "ingredients": [
+            "12oz tomato paste",
+            "1tsp dried oregano",
+            "1/2tsp salt",
+            "1/2tsp black pepper",
+            "3 1/4 cups flour",
+            "0.25oz rising yeast",
+            "1 1/3 cups warm water",
+            "1/3 cup oil",
+            "6oz pepperoni",
+            "1 cup shredded cheese"
+        ],
+        "img": "../../assets/media/pepperoni-pizza.png"
+
+    },
+    "cheese": {
+        "pizza": "Cheese",
+        "ingredients": [
+            "12oz tomato paste",
+            "1tsp dried oregano",
+            "1/2tsp salt",
+            "1/2tsp black pepper",
+            "3 1/4 cups flour",
+            "0.25oz rising yeast",
+            "1 1/3 cups warm water",
+            "1/3 cup oil",
+            "1 cup shredded cheese"
+        ],
+        "img": "../../assets/media/cheese-pizza.png"
+    },
+    "veggie": {
+        "pizza": "Vegitarian",
+        "ingredients": [
+            "12oz tomato paste",
+            "1tsp dried oregano",
+            "1/2tsp salt",
+            "1/2tsp black pepper",
+            "3 1/4 cups flour",
+            "0.25oz rising yeast",
+            "1 1/3 cups warm water",
+            "1/3 cup oil",
+            "1 cup shredded cheese",
+            "5 olives sliced",
+            "1/2 green pepper sliced",
+            "1/4 onion sliced"
+        ],
+        "img": "../../assets/media/veggie-pizza.png"
+    },
+    "beef": {
+        "pizza": "Beef",
+        "ingredients": [
+            "12oz tomato paste",
+            "1tsp dried oregano",
+            "1/2tsp salt",
+            "1/2tsp black pepper",
+            "3 1/4 cups flour",
+            "0.25oz rising yeast",
+            "1 1/3 cups warm water",
+            "1/3 cup oil",
+            "1 cup shredded cheese",
+            "1oz beef chunks"
+        ],
+        "img": "../../assets/media/beef-pizza.png"
+    },
+    "pinapple": {
+        "pizza": "Pinapple",
+        "ingredients": [
+            "12oz tomato paste",
+            "1tsp dried oregano",
+            "1/2tsp salt",
+            "1/2tsp black pepper",
+            "3 1/4 cups flour",
+            "0.25oz rising yeast",
+            "1 1/3 cups warm water",
+            "1/3 cup oil",
+            "1 cup shredded cheese",
+            "1oz chopped Pinapple"
+        ],
+        "img": "../../assets/media/pina-pizza.png"
+    },
+    "recipie": {
+        "recipe": 
+            "<strong>Pizza Crust:</strong> pre-heat oven to 180C, Place pizza stone in oven <br /> dissolve Yeast in 78C water for 10 minutes. <br /> sift flour and salt then pour oil into a seperate bowl then pour all ofit into the yeast bowl, mix until no longer wet. <br /> <strong>Creating Pizza: </strong>Roll Dough into a circle and place on pizza stone, add desired toppings and cook for 15 minutes <br /><strong>Sauce:</strong> combine all other ingredients into saucepan and cook for 15 minutes to create the sauce"
+    }
+
+}
