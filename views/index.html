@@ -42,7 +42,7 @@
             <div class="list links-list">
               <ul>
                 <li>
-                  <a href="/order/" data-view=".view-main" class="panel-close">Recipes</a>
+                  <a href="/order/" data-view=".view-main" class="panel-close">Recipe Sources</a>
                 </li>
                 <li>
                   <a href="/form/" data-view=".view-main" class="panel-close">Review</a>
@@ -119,52 +119,63 @@
                 <div id="wrapper" class="list links-list">
                 <ul>
                   <li>
-                      <a href="/order/" class="link popup-close image-list">
+                      <a href="#" class="link popup-open image-list" data-popup="#cheese-popup" onclick="getName('cheese')">
                         <img src="../assets/media/cheese-pizza.png" width="316px" height="159px"/>
                       </a>
                   </li>
                   <li>
-                      <a href="/order/" class="link popup-close image-list">
+                  <a href="#" class="link popup-open image-list" data-popup="#cheese-popup" onclick="getName('pinapple')">
                         <img src="../assets/media/pina-pizza.png" width="316px" height="159px"/>
                       </a>
                   </li>
                   <li>
-                      <a href="/order/" class="link popup-close image-list">
+                      <a href="#" class="link popup-open image-list" data-popup="#cheese-popup" onclick="getName('pepperoni')">
                         <img src="../assets/media/pepperoni-pizza.png" width="316px" height="159px"/>
                       </a>
                   </li>
                   <li>
-                      <a href="/order/" class="link popup-close image-list">
+                      <a href="#" class="link popup-open image-list" data-popup="#cheese-popup" onclick="getName('veggie')">
                         <img src="../assets/media/veggie-pizza.png" width="316px" height="159px"/>
                       </a>
                   </li>
                   <li>
-                      <a href="/order/" class="link popup-close image-list">
+                      <a href="#" class="link popup-open image-list" data-popup="#cheese-popup" onclick="getName('beef')">
                         <img src="../assets/media/beef-pizza.png" width="316px" height="159px"/>
                       </a>
                   </li>
                 </ul>
                 </div>
-                <div class="popup" id="cheese-popup">
-                    <div class="view">
-                      <div class="page">
-                        <div class="navbar">
-                          <div class="navbar-inner">
-                            <div class="title">cheese</div>
-                            <div class="right">
-                              <a href="#" class="link popup-close">Close</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </body>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="popup" id="cheese-popup">
+          <div class="view">
+            <div class="page">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="title" id="pizza-name"></div>
+                  <div class="right">
+                    <a href="#" class="link popup-close">Close</a>
+                  </div>
+                </div>
+              </div>
+              <div class="page-content">
+                <div id="pizza-img"></div>
+                <div class="block">
+                  <h3>Ingredients</h3>
+                  <div class="list links-list" id="pizza-ingred"></div>
+                </div>
+                <div class="block" id="recipe"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </div>
+
   <!-- Cordova -->
   <!--
   <script src="cordova.js"></script>
